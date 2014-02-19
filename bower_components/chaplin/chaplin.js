@@ -2419,7 +2419,7 @@ module.exports = Router = (function() {
     }
     if (handler) {
       _.defaults(options, {
-        changeURL: true
+        changeURL: false
       });
       handler.callback(path || params, options);
       return true;

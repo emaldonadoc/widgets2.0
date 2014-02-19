@@ -14,7 +14,7 @@ exports.config =
 
     stylesheets:
       joinTo:
-        'stylesheets/app.css': /^(app|components|vendor)/
+        'stylesheets/app.css': /^(app\/styles\/app|vendor)/          
 
     templates:
       joinTo: 'javascripts/app.js'

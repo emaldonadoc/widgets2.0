@@ -22,6 +22,7 @@
     "stylus-brunch": ">= 1.0 < 1.7",
 
     "handlebars-brunch": ">= 1.0 < 1.7",
+    "less-brunch": "arcesino/less-brunch",
 
     "uglify-js-brunch": ">= 1.0 < 1.7",
     "clean-css-brunch": ">= 1.0 < 1.7"
