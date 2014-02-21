@@ -23,7 +23,7 @@
   var css= document.createElement('link');
   css.setAttribute("rel", "stylesheet");
   css.setAttribute("type", "text/css");
-  css.setAttribute("href", "http://widgetdev.winbits.com/widget/stylesheets/app.css");
+  css.setAttribute("href", "http://widgetdev.winbits.com/stylesheets/app.css");
   head.appendChild(css);
 
   JavaScript.load('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', function() {
@@ -34,9 +34,9 @@
     Winbits.$ = $.noConflict(true);
     window.Winbits = Winbits;
     window.w$ = Winbits.$;
-    JavaScript.load('http://widgets.winbits.com/widget/javascripts/vendor.js', function() {
+    JavaScript.load('http://widgetdev.winbits.com/javascripts/vendor.js', function() {
       window.Backbone.$ = Winbits.$;
-      JavaScript.load('http://widgetdev.winbits.com/widget/javascripts/app.js', function() {
+      JavaScript.load('http://widgetdev.winbits.com/javascripts/app.js', function() {
         // TODO: No esperar a que se cargue todo el DOM para renderizar el widget. Esperar a que se rederize el container del widget.
         Winbits.$(document).ready(function($) {
             require('initialize');
