@@ -9,6 +9,4 @@ module.exports = class LoginController extends HomeController
   showLogin: ->
    @view = new ModalLoginView()
 
-#
-
 

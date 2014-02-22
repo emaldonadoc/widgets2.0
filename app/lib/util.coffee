@@ -2,11 +2,13 @@ vendor = require 'lib/vendor'
 
 module.exports =
   $ : window.Winbits.$
+
   storeKey : (key, value) ->
     localStorage[key] = value
 
   retrieveKey : (key) ->
-    localStorage[key]
+    value = localStorage[key]
+    console.log ['localstorage', value]
 
   deleteKey : (key) ->
     localStorage[key] = undefined
@@ -57,6 +59,7 @@ module.exports =
     Winbits.$.each $form.serializeArray(), (i, f) ->
       formData[f.name] = f.value
 
+#    console.log ['SERIALIZE FORM DATA ',formData]
     formData
 
   resetComponents  : ()->
