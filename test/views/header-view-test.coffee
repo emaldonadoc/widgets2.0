@@ -1,6 +1,7 @@
-HeaderView = require 'views/header-view'
-
-class HeaderViewTest extends HeaderView
+HeaderView = require "views/header/header-page-view"
+LoginView = require "views/login/login-view"
+FooterView = require "views/footer/footer-page-view"
+class HeaderViewTest
   renderTimes: 0
 
   render: ->
@@ -9,10 +10,18 @@ class HeaderViewTest extends HeaderView
 
 describe 'HeaderView', ->
   beforeEach ->
-    @view = new HeaderViewTest
+    @view = new HeaderView
+    @loginView = new LoginView
+    @footerView = new FooterView
 
   afterEach ->
     @view.dispose()
 
-  it 'should display 4 links', ->
-    expect(@view.$el.find 'a').to.have.length 4
+  it 'check renderized', ->
+    expect(@view.$el.find 'widgetWinbitsHeader').to.exist
+  
+  it 'find login container', ->
+    expect(@loginView.$el.find '.mainHeader .wrapper .login').to.exist
+
+  it 'find footer container', ->
+    expect(@footerView.$el.find 'footer').to.exist
