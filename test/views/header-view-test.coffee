@@ -2,11 +2,6 @@ HeaderView = require "views/header/header-page-view"
 LoginView = require "views/login/login-view"
 FooterView = require "views/footer/footer-page-view"
 class HeaderViewTest
-  renderTimes: 0
-
-  render: ->
-    super
-    @renderTimes += 1
 
 describe 'HeaderView', ->
   beforeEach ->

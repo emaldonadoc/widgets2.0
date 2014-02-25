@@ -3,6 +3,7 @@
 
 tests = [
   './views/header-view-test'
+  './views/modal-login-page-view-test'
 ]
 
 for test in tests
