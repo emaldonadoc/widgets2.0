@@ -17,17 +17,11 @@ module.exports = class ModalLoginPageView extends View
    $('.wb-main').remove()
 
   doLogin: (e) ->
-    e.preventDefault
     $form = Winbits.$('#loginForm')
-    console.log ['forma', $form.serializeArray()]
     formData = verticalId: 1
     formData = util.serializeForm($form, formData)
-    console.log [formData]
-
     if util.validateForm($form)
       submitButton = @$(e.currentTarget).prop('disabled', true)
-      that=@
-      console.log ('DO LOGIN!!!!')
       util.ajaxRequest(
         config.apiUrl + "/users/login.json",
         type: "POST"
@@ -37,11 +31,11 @@ module.exports = class ModalLoginPageView extends View
         headers:
           "Accept-Language": "es"
         success: (data) ->
-           console.log 'login success'
            Chaplin.utils.redirectTo controller: 'logged', action: 'showLogged'
         error: (xhr) ->
-           console.log 'login error'
-           alert 'login error'
+            alert 'login error'
         complete: ->
           submitButton.prop('disabled', false)
       )
+     else
+        'Fail to login'
