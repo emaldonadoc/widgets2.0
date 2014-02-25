@@ -1,7 +1,8 @@
 vendor = require 'lib/vendor'
 
 #todo hacer la exportacion en application y no en winbits.js
-module.exports = $ : window.Winbits.$
+module.exports = 
+  $ : window.Winbits.$
 
   storeKey : (key, value) ->
     localStorage[key] = value
