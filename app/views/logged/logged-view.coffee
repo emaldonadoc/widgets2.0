@@ -10,6 +10,10 @@ module.exports = class LoggedView extends View
     'click .icon.trigger.triggerMiCuenta': 'showDropMenu'
     'click .miCuenta-close': 'hideDropMenu'
 
+   initialize: ->
+     #todo add regiones  
+     $('.mainHeader .wrapper .login').hide()
+
 
    showDropMenu:(e) ->
     e.preventDefault

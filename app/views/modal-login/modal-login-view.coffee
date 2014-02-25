@@ -38,17 +38,10 @@ module.exports = class ModalLoginPageView extends View
           "Accept-Language": "es"
         success: (data) ->
            console.log 'login success'
-           alert 'LOGIN SUCCESS'
-#          that.publishEvent "applyLogin", data.response
-#          Winbits.$('.modal').modal 'hide'
-#          if data.response.showRemainder == true
-#            that.publishEvent 'completeProfileRemainder'
+           Chaplin.utils.redirectTo controller: 'logged', action: 'showLogged'
         error: (xhr) ->
            console.log 'login error'
            alert 'login error'
-#          console.log arguments
-#          error = JSON.parse(xhr.responseText)
-#          that.renderLoginFormErrors $form, error
         complete: ->
           submitButton.prop('disabled', false)
       )

@@ -14,5 +14,4 @@ module.exports = class LoginPageView extends View
 
   clickLogin: (e) ->
     e.preventDefault
-    #$('.mainHeader .wrapper .login').hide()
     Chaplin.utils.redirectTo controller:'login', action: 'showLogin'
