@@ -20,7 +20,7 @@ class ModalLoginPageViewTest extends ModalLoginPageView
         it 'do login with incomplete form', ->
             util.validateForm = sinon.stub().returns(false)
             event = sinon.stub()
-            expect(@view.doLogin(event)).to.equal 'Fail to login'
+            expect(@view.doLogin(event)).to.equal 'Fail to login 1'
 
         it 'do login should throws an error to Login', ->
             util.validateForm = sinon.stub().returns(true)
